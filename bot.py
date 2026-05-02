@@ -878,6 +878,10 @@ async def reply(body: ReplyRequest) -> dict[str, Any]:
 
 
 if __name__ == "__main__":
+    import os
     import uvicorn
 
-    uvicorn.run("bot:app", host="0.0.0.0", port=8080, reload=False)
+    port = int(os.environ.get("PORT", 8080))
+    host = os.environ.get("HOST", "0.0.0.0")
+
+    uvicorn.run("bot:app", host=host, port=port, reload=False)
