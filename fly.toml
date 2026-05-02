@@ -1,5 +1,4 @@
 app = "magicpin-vera"
-primary_region = "ord"
 
 [build]
   dockerfile = "Dockerfile"
